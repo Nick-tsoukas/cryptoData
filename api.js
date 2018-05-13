@@ -1,11 +1,12 @@
 //BITSTAMP_SPOT_BTC_USD
 // now must get user input and think
 coin = "BTC";
+
 function buildSettings(coin) {
   var settings = {
     "async": true,
     "crossDomain": true,
-    url: `https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_${coin}_USD/history?period_id=1DAY&time_start=2017-01-01T00:00:00&time_end=2018-01-01T00:00:00&apikey=C4191423-C21B-48EF-811E-66BA67EDD086`,
+    url: `https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_${coin}_USD/history?period_id=1DAY&time_start=2017-01-01T00:00:00&time_end=2018-01-01T00:00:00&apikey={add api key}`,
     "method": "GET",
     "headers": {
       "cache-control": "no-cache",
