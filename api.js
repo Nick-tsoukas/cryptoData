@@ -1,8 +1,11 @@
+//BITSTAMP_SPOT_BTC_USD
+// now must get user input and think
+
 
 var settings = {
   "async": true,
   "crossDomain": true,
-  url: `https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/history?period_id=1DAY&time_start=2017-01-01T00:00:00&time_end=2018-01-01T00:00:00&apikey={api key goes here}`,
+  url: `https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/history?period_id=1DAY&time_start=2017-01-01T00:00:00&time_end=2018-01-01T00:00:00&apikey=C4191423-C21B-48EF-811E-66BA67EDD086`,
   "method": "GET",
   "headers": {
     "cache-control": "no-cache",
@@ -10,22 +13,31 @@ var settings = {
   }
 }
 
+// call to the API
 function getData(settings) {
   $.ajax(settings).then(function(response) {
 
-    var price_close = response["0"].price_close;
-    var time = response["0"].time_close;
-    var data = response;
+    // var price_close = response["0"].price_close;
+    // var time = response["0"].time_close;
+    // var data = response;
+
+    //! this is our array...It's empty now
     var ourData = [];
 
-    function buildData() {
+
+    //! This will build the array of numbers
+    function buildData(data) {
       for (var i = 0; i < data.length; i++) {
-        ourData.push(data.price_close);
+        ourData.push(data[i].price_close);
+        // console.log(data[i].price_close);
       };
       return ourData;
     }
 
-    var NewData = buildData();
+    // newData is equal to the result of the buildData() on line 26
+    // line 59 or so.... we say data = to newData
+    var newData = buildData(response);
+    console.log(newData);
 
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
@@ -47,14 +59,7 @@ function getData(settings) {
           ],
           datasets: [
             {
-              data: [
-                10101,
-                1,
-                1,
-                1,
-                1,
-                1
-              ],
+              data: newData,
               lineTension: 0,
               backgroundColor: 'transparent',
               borderColor: '#007bff',
