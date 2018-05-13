@@ -26,6 +26,7 @@ function getData(settings) {
     }
 
     var NewData = buildData();
+
       var ctx = document.getElementById("myChart");
       var myChart = new Chart(ctx, {
         type: 'line',
@@ -80,6 +81,7 @@ function getData(settings) {
     });
   }
 
+ // my ajax call
   getData(settings);
 
   // var ctx = document.getElementById("myChart");
@@ -128,9 +130,9 @@ function getData(settings) {
   // On the line below... using template literals: `${}`
   // The value of coin:${coin} comes from a user input with the id of... #coin_val_text
   // currently coin is = an empty string ""
-  // "url": `https://rest.coinapi.io/v1/exchangerate/${coin}?apikey=620ACE64-6AA7-4E5C-90BE-C8A7AE16F9A2`,
-  // "url": `https://rest.coinapi.io/v1/exchangerate/BTC?apikey=620ACE64-6AA7-4E5C-90BE-C8A7AE16F9A2`,
-  // url: `https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/history?period_id=1DAY&time_start=2016-01-01T00:00:00&time_end=2017-01-01T00:00:00&apikey=620ACE64-6AA7-4E5C-90BE-C8A7AE16F9A2`,
+
+
+
 
 
   //========================need this
