@@ -2,7 +2,7 @@
 var settings = {
   "async": true,
   "crossDomain": true,
-  url: `https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/history?period_id=1DAY&time_start=2017-01-01T00:00:00&time_end=2018-01-01T00:00:00&apikey=620ACE64-6AA7-4E5C-90BE-C8A7AE16F9A2`,
+  url: `https://rest.coinapi.io/v1/ohlcv/BITSTAMP_SPOT_BTC_USD/history?period_id=1DAY&time_start=2017-01-01T00:00:00&time_end=2018-01-01T00:00:00&apikey={api key goes here}`,
   "method": "GET",
   "headers": {
     "cache-control": "no-cache",
