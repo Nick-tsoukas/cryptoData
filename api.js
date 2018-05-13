@@ -123,7 +123,6 @@ function getData(settings) {
   //
   // function putPrice(){
   // }
-  // https://rest.coinapi.io/v1/exchangerate/BTC?apikey=620ACE64-6AA7-4E5C-90BE-C8A7AE16F9A2
 
   // coin is initialy set to empty string so we don't get a reference error
   //this is the setting object that the ajax call will use in the function getData
